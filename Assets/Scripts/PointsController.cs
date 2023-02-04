@@ -11,6 +11,7 @@ public class PointsController : MonoBehaviour
   {
    
   }
+
   public enum TypePoint { 
     Positive,
     Negative,
