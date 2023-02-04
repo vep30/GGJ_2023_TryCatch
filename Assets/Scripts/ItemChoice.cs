@@ -13,11 +13,11 @@ public class ItemChoice : MonoBehaviour
 
     [SerializeField] private Point point;
     public Item item;
-    public event Action<Item> choicedItem;
+    public event Action<Item> ChosenItem;
 
     private void OnMouseDown()
     {
-        choicedItem?.Invoke(item);
-        point.DisableItemsChoice();
+        ChosenItem?.Invoke(item);
+        // point.DisableItemsChoice();
     }
 }

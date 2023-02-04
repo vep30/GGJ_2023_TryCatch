@@ -10,6 +10,14 @@ public class Point : MonoBehaviour
     [SerializeField] private ItemChoice foodButton, waterButton, happinessButton;
     private bool isPositive;
 
+
+    private void Awake()
+    {
+        foodButton.ChosenItem += DisableItemsChoice;
+        waterButton.ChosenItem += DisableItemsChoice;
+        happinessButton.ChosenItem += DisableItemsChoice;
+    }
+
     public void RandomWeight()
     {
         var rnd = Random.Range(100, 400);
@@ -24,9 +32,9 @@ public class Point : MonoBehaviour
         happinessButton.gameObject.SetActive(true);
     }
 
-    public void DisableItemsChoice()
+    public void DisableItemsChoice(ItemChoice.Item item)
     {
-        Debug.Log("Choice is made");
+        Debug.Log($"Choice is {item}");
         foodButton.gameObject.SetActive(false);
         waterButton.gameObject.SetActive(false);
         happinessButton.gameObject.SetActive(false);
