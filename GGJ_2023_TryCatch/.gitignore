@@ -1,6 +1,37 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@Pa1nK1ller 
+
+Branch master was renamed to main.  
+github
+/
+gitignore
+Public
+Fork your own copy of github/gitignore
+Code
+Pull requests
+371
+Actions
+Security
+Insights
+gitignore/Unity.gitignore
+@bdougie
+bdougie Merge branch 'main' into patch-1
+Latest commit eafb2ee on Dec 11, 2021
+ History
+ 45 contributors
+@mviranyi@shana@FritzsHero@ahmyi@FutureClemens@shiftkey@bdougie@matzar@networm@Wiblz@tim-hub@theDrake
+72 lines (59 sloc)  1.25 KB
+
 # This .gitignore file should be placed at the root of your Unity project directory
 #
-# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
+# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 /[Ll]ibrary/
 /[Tt]emp/
@@ -14,8 +45,8 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
-# Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
+# Recordings can get excessive in size
+/[Rr]ecordings/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -59,6 +90,7 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
+*.app
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -69,11 +101,17 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-ClassDiagram1.cd
-Assets/ClassDiagram1.cd.meta
-Assets/AddressableAssetsData/Windows.meta
-debug.log
-.idea/*
-Assets/AmplifyShaderEditor/
-Assets/AmplifyShaderEditor.meta
-
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
