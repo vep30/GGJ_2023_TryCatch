@@ -33,13 +33,16 @@ public class BarController : MonoBehaviour
     public void SetFoodValue(int value)
     {
         food.value += value;
+        Debug.Log($"Food = {food.value}");
     }
     public void SetWaterValue(int value)
     {
         water.value += value;
+        Debug.Log($"Water = {water.value}");
     }
     public void SetHappinessValue(int value)
     {
         happiness.value += value;
+        Debug.Log($"Happiness = {happiness.value}");
     }
 }

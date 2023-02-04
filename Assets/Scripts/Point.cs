@@ -1,10 +1,13 @@
+using System;
 using UnityEngine;
 
 public class Point : MonoBehaviour
 {
     [SerializeField] private int weight;
     [SerializeField] private ItemChoice foodButton, waterButton, happinessButton;
-    private bool isActive; 
+    private bool isActive;
+
+    public event Action<int, ItemChoice.Item> ChosenItem;
 
     private void Awake()
     {
@@ -35,6 +38,7 @@ public class Point : MonoBehaviour
         foodButton.gameObject.SetActive(false);
         waterButton.gameObject.SetActive(false);
         happinessButton.gameObject.SetActive(false);
+        ChosenItem?.Invoke(weight,item);
         isActive = false;
     }
 }
