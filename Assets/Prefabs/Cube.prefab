@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7872896762505822269}
   - component: {fileID: 5261523704541087370}
-  - component: {fileID: 5109748448709403564}
   - component: {fileID: 6123418300137132227}
   m_Layer: 0
   m_Name: Cube (2)
@@ -84,22 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5109748448709403564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156842255556310891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49f0422f8f5683e45b9661937a6da2b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 0
-  foodButton: {fileID: 0}
-  waterButton: {fileID: 0}
-  happinessButton: {fileID: 0}
 --- !u!58 &6123418300137132227
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -245,7 +228,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3432632381107954833}
   - component: {fileID: 5656751511508838479}
-  - component: {fileID: 6697162044331240326}
   - component: {fileID: 2869711167968982719}
   m_Layer: 0
   m_Name: Cube (1)
@@ -319,22 +301,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6697162044331240326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2623995210647883567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49f0422f8f5683e45b9661937a6da2b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 0
-  foodButton: {fileID: 0}
-  waterButton: {fileID: 0}
-  happinessButton: {fileID: 0}
 --- !u!58 &2869711167968982719
 CircleCollider2D:
   m_ObjectHideFlags: 0
