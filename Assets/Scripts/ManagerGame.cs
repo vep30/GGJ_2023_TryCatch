@@ -11,8 +11,7 @@ public class ManagerGame : MonoBehaviour
 
    public void StartGame()
    {
-      rowsController.InitPoints();
-      rowsController.ChosenItemAction += UpdateBar;
+      rowsController.InitPoints(UpdateBar);
       barController.StartResetSlider();
       
    }

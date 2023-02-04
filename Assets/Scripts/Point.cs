@@ -5,9 +5,16 @@ public class Point : MonoBehaviour
 {
     [SerializeField] private int weight;
     [SerializeField] private ItemChoice foodButton, waterButton, happinessButton;
-    private bool isActive;
 
-    public event Action<int, ItemChoice.Item> ChosenItem;
+    public int positionOnRow;
+    public int numberRow;
+    public bool isActive;
+    public bool isFinish;
+
+    public event Action<int, ItemChoice.Item> ChosenItemAction;
+    public event Action<Vector3,int,int> ChosenStartPointAction; 
+    public event Action<Vector3,int,int,Point> ChosenEndPointAction;
+    public event Action FinishAction; 
 
     private void Awake()
     {
@@ -24,21 +31,36 @@ public class Point : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!isActive)
+        if (isFinish)
+        {
+            FinishAction?.Invoke();
+            Debug.Log("finish");
             return;
-        Debug.Log("Click to main point");
+        }
+        if (!isActive)
+        {
+            ChosenStartPointAction?.Invoke(transform.position,positionOnRow,numberRow);
+            Debug.Log("StartPoint");
+            return;
+        }
+        ChosenEndPointAction?.Invoke(transform.position,positionOnRow,numberRow,this);
+        Debug.Log("EndPoint");
+    }
+
+    public void ActivatePoint()
+    {
         foodButton.gameObject.SetActive(true);
         waterButton.gameObject.SetActive(true);
         happinessButton.gameObject.SetActive(true);
     }
 
-    public void DisableItemsChoice(ItemChoice.Item item)
+    private void DisableItemsChoice(ItemChoice.Item item)
     {
         Debug.Log($"Choice is {item}");
         foodButton.gameObject.SetActive(false);
         waterButton.gameObject.SetActive(false);
         happinessButton.gameObject.SetActive(false);
-        ChosenItem?.Invoke(weight,item);
+        ChosenItemAction?.Invoke(weight,item);
         isActive = false;
     }
 }
