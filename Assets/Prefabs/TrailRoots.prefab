@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8628647726636822950}
   - component: {fileID: 8628647726636822951}
+  - component: {fileID: 2710323495753812019}
   m_Layer: 0
   m_Name: TrailRoots
   m_TagString: Untagged
@@ -89,8 +90,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.21168512
       - serializedVersion: 3
-        time: 0.7319258
-        value: 0.21425755
+        time: 0.77941114
+        value: 0.20797093
         inSlope: 1.2439518
         outSlope: 1.2439518
         tangentMode: 0
@@ -147,3 +148,15 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &2710323495753812019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628647726636822945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a6df69c48c99d48a10170e27b8cf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
