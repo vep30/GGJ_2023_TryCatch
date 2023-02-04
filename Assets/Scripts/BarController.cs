@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,4 +30,16 @@ public class BarController : MonoBehaviour
         return Mathf.RoundToInt(rnd/10)*10;
     }
 
+    public void SetFoodValue(int value)
+    {
+        food.value += value;
+    }
+    public void SetWaterValue(int value)
+    {
+        water.value += value;
+    }
+    public void SetHappinessValue(int value)
+    {
+        happiness.value += value;
+    }
 }
