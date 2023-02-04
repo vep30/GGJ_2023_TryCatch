@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7872896762505822269}
   - component: {fileID: 5261523704541087370}
   - component: {fileID: 6123418300137132227}
+  - component: {fileID: 2396664731257878608}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: happinessButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +100,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &2396664731257878608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156842255556310891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbaf28e2e9d40e54683e67699ca760a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: {fileID: 1367787949236067498}
+  item: 3
 --- !u!1 &1520972495674971314
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +127,7 @@ GameObject:
   - component: {fileID: 1367787949236067498}
   - component: {fileID: 9040277293586178643}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Open Choice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,9 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 0
-  foodButton: {fileID: 8522363716418087238}
-  waterButton: {fileID: 2623995210647883567}
-  happinessButton: {fileID: 156842255556310891}
+  foodButton: {fileID: 741899742614164205}
+  waterButton: {fileID: 1788644894701754117}
+  happinessButton: {fileID: 2396664731257878608}
 --- !u!58 &9040277293586178643
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -229,8 +244,9 @@ GameObject:
   - component: {fileID: 3432632381107954833}
   - component: {fileID: 5656751511508838479}
   - component: {fileID: 2869711167968982719}
+  - component: {fileID: 1788644894701754117}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: waterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,6 +333,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &1788644894701754117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623995210647883567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbaf28e2e9d40e54683e67699ca760a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: {fileID: 1367787949236067498}
+  item: 2
 --- !u!1 &8522363716418087238
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,8 +358,9 @@ GameObject:
   - component: {fileID: 6539652853213219822}
   - component: {fileID: 5520855843209316591}
   - component: {fileID: 2930191751784297631}
+  - component: {fileID: 741899742614164205}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: foodButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,3 +447,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &741899742614164205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8522363716418087238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbaf28e2e9d40e54683e67699ca760a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: {fileID: 1367787949236067498}
+  item: 1
