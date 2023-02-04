@@ -9,11 +9,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 144473078455309534, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
       propertyPath: m_Name
-      value: Row (1)
+      value: Row 3 points 2
       objectReference: {fileID: 0}
     - target: {fileID: 1577990641746193875, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132624877312665339, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
+      propertyPath: row1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132624877312665339, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
+      propertyPath: row1.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2364965674711292165, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
       propertyPath: m_LocalPosition.x

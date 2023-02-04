@@ -1,16 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
-public class RowController : MonoBehaviour
+namespace DefaultNamespace
 {
-  [SerializeField] private List<Point> row1;
-
-  public void RandomPoint()
-  {
-    foreach (var point in row1)
+    public class RowController : MonoBehaviour
     {
-      point.RandomWeight();
+        [SerializeField] private PointsController pointsController;
+
+        private int 
+            _positiveFoodPoints = 3, 
+            _negativeFoodPoints = 3,
+            _positiveWaterPoints = 3,
+            _negativeWaterPoints = 3,
+            _positiveHappinessPoints = 3,
+            _negaiveHappinesPoints = 3,
+            neutralPoints = 2;
+
+        private void InitPoints()
+        {
+            
+        }
+
     }
-  }
 }
