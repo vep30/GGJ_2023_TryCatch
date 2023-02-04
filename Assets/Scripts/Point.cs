@@ -21,6 +21,7 @@ public class Point : MonoBehaviour
 
     private void OnMouseDown()
     {
+
         if (!isActive)
             return;
         Debug.Log("Click to main point");

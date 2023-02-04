@@ -49,6 +49,7 @@ namespace DefaultNamespace
 
             return null;
         }
+
         private IEnumerator InitPointsWithNeutral(PointsController pointsController)
         {
             while (pointsController.haveFreeItem)
@@ -58,7 +59,6 @@ namespace DefaultNamespace
                     pointsController.RandomPoint(PointsController.TypePoint.Neutral);
                     neutralPoints--;
                     Debug.Log("Set Neutral point");
-
                 }
                 var rnd = Random.Range(0, 91);
                 if (rnd > 0 && rnd <= 45 && _negativePoints > 0)
@@ -66,14 +66,12 @@ namespace DefaultNamespace
                     pointsController.RandomPoint(PointsController.TypePoint.Negative);
                     _negativePoints--;
                     Debug.Log("Set Negative point");
-
                 }
                 else if (rnd > 45 && _positivePoints > 0)
                 {
                     pointsController.RandomPoint(PointsController.TypePoint.Positive);
                     _positivePoints--;
                     Debug.Log("Set Positive point");
-
                 }
             }
 
