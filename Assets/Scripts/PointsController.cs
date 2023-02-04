@@ -18,7 +18,7 @@ public class PointsController : MonoBehaviour
 
 
     public void RandomPoint(TypePoint type, Action<int, ItemChoice.Item> chosenItem,
-        Action<Vector3, int, int> chosenStartPoint, Action<Vector3, int, int,Point> chosenEndPoint)
+        Action<Vector3, int, int> chosenStartPoint, Action<Vector3, int, int,Point> chosenEndPoint, Action<Vector3> finish)
     {
         if (!tempList.IsNullOrEmpty())
         {
@@ -27,9 +27,11 @@ public class PointsController : MonoBehaviour
             {
                 case TypePoint.Positive:
                     tempList[0].SetWeight(RandomWeight());
+                    tempList[0].SetColor(Color.yellow);
                     break;
                 case TypePoint.Negative:
                     tempList[0].SetWeight(RandomWeight() * -1);
+                    tempList[0].SetColor(Color.black);
                     break;
                 case TypePoint.Neutral:
                     tempList[0].SetWeight(0);
@@ -41,6 +43,7 @@ public class PointsController : MonoBehaviour
             tempList[0].ChosenItemAction += chosenItem;
             tempList[0].ChosenStartPointAction += chosenStartPoint;
             tempList[0].ChosenEndPointAction += chosenEndPoint;
+            // tempList[0].FinishAction += finish;
             tempList.RemoveAt(0);
         }
     }
