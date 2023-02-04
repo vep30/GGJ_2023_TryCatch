@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class Point : MonoBehaviour
 {
     [SerializeField] private int weight;
-    [SerializeField] private GameObject foodButton, waterButton, happinessButton;
+    [SerializeField] private ItemChoice foodButton, waterButton, happinessButton;
     private bool isPositive;
 
     public void RandomWeight()
@@ -19,8 +19,16 @@ public class Point : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Click to main point");
-        foodButton.SetActive(true);
-        waterButton.SetActive(true);
-        happinessButton.SetActive(true);
+        foodButton.gameObject.SetActive(true);
+        waterButton.gameObject.SetActive(true);
+        happinessButton.gameObject.SetActive(true);
+    }
+
+    public void DisableItemsChoice()
+    {
+        Debug.Log("Choice is made");
+        foodButton.gameObject.SetActive(false);
+        waterButton.gameObject.SetActive(false);
+        happinessButton.gameObject.SetActive(false);
     }
 }
