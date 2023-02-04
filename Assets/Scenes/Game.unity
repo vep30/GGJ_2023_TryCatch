@@ -808,7 +808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &943995498
 Transform:
   m_ObjectHideFlags: 0
@@ -1552,6 +1552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rowsController: {fileID: 943995499}
   barController: {fileID: 654140535}
+  moveBack: {fileID: 2110009260}
+  timeDownHand: 2
 --- !u!1 &1809339502
 GameObject:
   m_ObjectHideFlags: 0

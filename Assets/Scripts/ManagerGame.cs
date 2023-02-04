@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DefaultNamespace;
 using UnityEngine;
 
@@ -6,7 +7,10 @@ public class ManagerGame : MonoBehaviour
 {
     [SerializeField] private RowsController rowsController;
     [SerializeField] private BarController barController;
+    [SerializeField] private GameObject moveBack;
+    [SerializeField] private float timeDownHand;
     private int numberMoves = 9;
+    private float targetBackground = 242;
 
     public void StartGame()
     {
@@ -29,6 +33,7 @@ public class ManagerGame : MonoBehaviour
 
     private void EndGame()
     {
+        Debug.Log($"food = {barController.FoodValue} water = {barController.WaterValue} happiness = {barController.HappinessValue}");
         Debug.Log("EndGame");
         if (
             (barController.FoodValue >= 0 && barController.FoodValue <= 30) &&
@@ -48,6 +53,8 @@ public class ManagerGame : MonoBehaviour
         {
             Debug.Log("PieceDeath");
         }
+        rowsController.DisableRows();
+        StartCoroutine(MoveBackground());
     }
 
     public void UpdateBar(int weight, ItemChoice.Item item)
@@ -74,4 +81,19 @@ public class ManagerGame : MonoBehaviour
     {
         barController.SetNumberMoves(numberMoves);
     }
+
+    private IEnumerator MoveBackground()
+    {
+        var curTime = 0f;
+        var startBackgroundpos = moveBack.transform.localPosition;
+        while (curTime < timeDownHand)
+        {
+            curTime += Time.deltaTime;
+            var progress = Mathf.Clamp01(curTime / timeDownHand);
+            moveBack.transform.localPosition =
+                Vector3.Lerp(startBackgroundpos, new Vector3(0, targetBackground, 0), progress);
+            yield return null;
+        }
+    }
+
 }

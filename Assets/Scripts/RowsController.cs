@@ -122,5 +122,10 @@ namespace DefaultNamespace
         {
          FinishAction?.Invoke();   
         }
+
+        public void DisableRows()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
