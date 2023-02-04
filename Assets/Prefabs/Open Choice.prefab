@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbaf28e2e9d40e54683e67699ca760a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: {fileID: 1367787949236067498}
   item: 3
 --- !u!1 &1520972495674971314
 GameObject:
@@ -217,6 +216,7 @@ MonoBehaviour:
   foodButton: {fileID: 741899742614164205}
   waterButton: {fileID: 1788644894701754117}
   happinessButton: {fileID: 2396664731257878608}
+  positionOnRow: 0
 --- !u!58 &9040277293586178643
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.22
+  m_Radius: 0.1
 --- !u!1 &2623995210647883567
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbaf28e2e9d40e54683e67699ca760a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: {fileID: 1367787949236067498}
   item: 2
 --- !u!1 &8522363716418087238
 GameObject:
@@ -459,5 +458,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbaf28e2e9d40e54683e67699ca760a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: {fileID: 1367787949236067498}
   item: 1
