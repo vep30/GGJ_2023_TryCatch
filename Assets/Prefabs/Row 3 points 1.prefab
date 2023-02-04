@@ -256,6 +256,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7004991801405875250, guid: 56c7ed351634fa948bdbb6c411047b74, type: 3}
+      propertyPath: row.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004991801405875250, guid: 56c7ed351634fa948bdbb6c411047b74, type: 3}
+      propertyPath: row.Array.data[0]
+      value: 
+      objectReference: {fileID: 1667077841062296833}
+    - target: {fileID: 7004991801405875250, guid: 56c7ed351634fa948bdbb6c411047b74, type: 3}
+      propertyPath: row.Array.data[1]
+      value: 
+      objectReference: {fileID: 4963083045014084469}
+    - target: {fileID: 7004991801405875250, guid: 56c7ed351634fa948bdbb6c411047b74, type: 3}
+      propertyPath: row.Array.data[2]
+      value: 
+      objectReference: {fileID: 2456304124454881751}
+    - target: {fileID: 7004991801405875250, guid: 56c7ed351634fa948bdbb6c411047b74, type: 3}
       propertyPath: row1.Array.data[0]
       value: 
       objectReference: {fileID: 1667077841062296833}
