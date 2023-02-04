@@ -16,7 +16,7 @@ public class PointsController : MonoBehaviour
     tempList = new List<Point>(row);
   }
   
-  public void RandomPoint(TypePoint type)
+  public void RandomPoint(TypePoint type, Action<int, ItemChoice.Item> action)
   {
     if (!tempList.IsNullOrEmpty())
     {
@@ -35,6 +35,8 @@ public class PointsController : MonoBehaviour
         default:
           throw new ArgumentOutOfRangeException(nameof(type), type, null);
       }
+
+      tempList[0].ChosenItem += action;
       tempList.RemoveAt(0);
     }
   }

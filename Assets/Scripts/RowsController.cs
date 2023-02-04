@@ -1,6 +1,7 @@
-﻿using System.Collections;
-using System.ComponentModel.Design.Serialization;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DefaultNamespace
 {
@@ -14,6 +15,7 @@ namespace DefaultNamespace
 
         private int _positivePoints = 9, _negativePoints = 9, neutralPoints = 2;
 
+        public event Action<int, ItemChoice.Item> ChosenItemAction; 
         public void InitPoints()
         {
             StartCoroutine(InitPointsCor());
@@ -35,13 +37,13 @@ namespace DefaultNamespace
                 var rnd = Random.Range(0, 91);
                 if (rnd > 0 && rnd <= 45 && _negativePoints > 0)
                 {
-                    pointsController.RandomPoint(PointsController.TypePoint.Negative);
+                    pointsController.RandomPoint(PointsController.TypePoint.Negative,ChosenItem);
                     _negativePoints--;
                     Debug.Log("Set Negative point");
                 }
                 else if (rnd>45 && _positivePoints > 0)
                 {
-                    pointsController.RandomPoint(PointsController.TypePoint.Positive);
+                    pointsController.RandomPoint(PointsController.TypePoint.Positive,ChosenItem);
                     _positivePoints--;
                     Debug.Log("Set Positive point");
                 }
@@ -54,28 +56,33 @@ namespace DefaultNamespace
         {
             while (pointsController.haveFreeItem)
             {
-                for (int i = 0; i < neutralPoints; i++)
+                if (neutralPoints>0)
                 {
-                    pointsController.RandomPoint(PointsController.TypePoint.Neutral);
+                    pointsController.RandomPoint(PointsController.TypePoint.Neutral,ChosenItem);
                     neutralPoints--;
                     Debug.Log("Set Neutral point");
                 }
                 var rnd = Random.Range(0, 91);
                 if (rnd > 0 && rnd <= 45 && _negativePoints > 0)
                 {
-                    pointsController.RandomPoint(PointsController.TypePoint.Negative);
+                    pointsController.RandomPoint(PointsController.TypePoint.Negative,ChosenItem);
                     _negativePoints--;
                     Debug.Log("Set Negative point");
                 }
                 else if (rnd > 45 && _positivePoints > 0)
                 {
-                    pointsController.RandomPoint(PointsController.TypePoint.Positive);
+                    pointsController.RandomPoint(PointsController.TypePoint.Positive,ChosenItem);
                     _positivePoints--;
                     Debug.Log("Set Positive point");
                 }
             }
 
             return null;
+        }
+
+        public void ChosenItem(int weight, ItemChoice.Item item)
+        {
+            ChosenItemAction?.Invoke(weight,item);
         }
     }
 }
