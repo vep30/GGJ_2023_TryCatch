@@ -10,6 +10,7 @@ public class ItemChoice : MonoBehaviour
         Water = 2,
         Happiness = 3,
     }
+
     public Item item;
     public event Action<Item> ChosenItem;
 
