@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156842255556310891}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.65, y: 0.517, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1170895988225461368}
   m_RootOrder: 2
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8e5cde0ea27b2f540b46f110f59ed7b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.56
 --- !u!114 &2396664731257878608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +217,27 @@ MonoBehaviour:
   waterButton: {fileID: 1788644894701754117}
   happinessButton: {fileID: 2396664731257878608}
   sprite: {fileID: 5871100131592058925}
+  food: {fileID: 5520855843209316591}
+  water: {fileID: 5656751511508838479}
+  happiness: {fileID: 5261523704541087370}
+  spiteMinus10:
+  - {fileID: 21300000, guid: 3f77dab811d0e7f41a0a759a68f08ef1, type: 3}
+  - {fileID: 21300000, guid: db889040054a9ec428671f453daed009, type: 3}
+  spiteMinus20:
+  - {fileID: 21300000, guid: bcaecad71b94c244cb47f49d83f6ec28, type: 3}
+  - {fileID: 21300000, guid: 0d4b3d7aea42eb844b5f15789ad79042, type: 3}
+  spiteMinus30:
+  - {fileID: 21300000, guid: 5f49537ce583299468ba9fd8fed4686d, type: 3}
+  - {fileID: 21300000, guid: edec8ed8d0c46214185f6bcf5706b763, type: 3}
+  spitePlus10:
+  - {fileID: 21300000, guid: 16180dda75977254197644ab0d1c79d5, type: 3}
+  - {fileID: 21300000, guid: 1a319bb890a60394f9b47468bfc4ac7f, type: 3}
+  spitePlus20:
+  - {fileID: 21300000, guid: d512986230e87434fa0fce153d739b85, type: 3}
+  - {fileID: 21300000, guid: e9e0004cbad1feb4eabb3365fb5d1473, type: 3}
+  spitePlus30:
+  - {fileID: 21300000, guid: e9efed9ac48f65b4782f16a9f664c412, type: 3}
+  - {fileID: 21300000, guid: 75e1a0da0b37fb34aaf8e5f8e48edcd5, type: 3}
   positionOnRow: 0
   numberRow: 0
   isActive: 0
@@ -264,8 +285,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2623995210647883567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.049, y: 0.72900003, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1170895988225461368}
   m_RootOrder: 1
@@ -310,7 +331,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: edec8ed8d0c46214185f6bcf5706b763, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -334,9 +355,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.32}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.46
 --- !u!114 &1788644894701754117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,8 +398,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8522363716418087238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.704, y: 0.457, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1170895988225461368}
   m_RootOrder: 0
@@ -423,7 +444,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: e9efed9ac48f65b4782f16a9f664c412, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -449,7 +470,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.63
 --- !u!114 &741899742614164205
 MonoBehaviour:
   m_ObjectHideFlags: 0

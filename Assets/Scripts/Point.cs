@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Point : MonoBehaviour
@@ -6,6 +7,10 @@ public class Point : MonoBehaviour
     [SerializeField] private int weight;
     [SerializeField] private ItemChoice foodButton, waterButton, happinessButton;
     [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private SpriteRenderer food, water, happiness;
+
+    [SerializeField]
+    private List<Sprite> spiteMinus10, spiteMinus20, spiteMinus30, spitePlus10, spitePlus20, spitePlus30;
 
     public int positionOnRow;
     public int numberRow;
@@ -27,6 +32,33 @@ public class Point : MonoBehaviour
     public void SetWeight(int value)
     {
         weight = value;
+        switch (value)
+        {
+            case -30:
+                food.sprite = spiteMinus30[0];
+                water.sprite = spiteMinus30[1];
+                break;
+            case -20:
+                food.sprite = spiteMinus20[0];
+                water.sprite = spiteMinus20[1];
+                break;
+            case -10:
+                food.sprite = spiteMinus10[0];
+                water.sprite = spiteMinus10[1];
+                break;
+            case 10:
+                food.sprite = spitePlus10[0];
+                water.sprite = spitePlus10[1];
+                break;
+            case 20:
+                food.sprite = spitePlus20[0];
+                water.sprite = spitePlus20[1];
+                break;
+            case 30:
+                food.sprite = spitePlus20[0];
+                water.sprite = spitePlus20[1];
+                break;
+        }
         isActive = true;
     }
 

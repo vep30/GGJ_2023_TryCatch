@@ -558,8 +558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 150
+    m_Right: -50
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
@@ -586,6 +586,7 @@ MonoBehaviour:
   food: {fileID: 5421402181609093053}
   water: {fileID: 5421402180713506249}
   happiness: {fileID: 5421402181395125648}
+  _text: {fileID: 0}
 --- !u!1 &5421402180713506251
 GameObject:
   m_ObjectHideFlags: 0

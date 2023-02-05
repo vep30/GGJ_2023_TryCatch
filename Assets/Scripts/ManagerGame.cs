@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ManagerGame : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ManagerGame : MonoBehaviour
     [SerializeField] private BarController barController;
     [SerializeField] private GameObject moveBack;
     [SerializeField] private float timeDownHand;
+    [SerializeField] private Image finishSprite;
+    [SerializeField] private Sprite baby, goblin, govnyashka;
     private int numberMoves = 9;
     private float targetBackground = 242;
 
@@ -41,17 +44,20 @@ public class ManagerGame : MonoBehaviour
             (barController.HappinessValue >= 0 && barController.HappinessValue <= 30))
         {
             Debug.Log("HappyEndGame");
+            finishSprite.sprite = baby;
         }
         else if (barController.FoodValue > 30 || barController.WaterValue > 30 || barController.HappinessValue > 30 ||
-                 (barController.FoodValue >= -30 && barController.FoodValue < 0 && barController.WaterValue >= -30 &&
-                  barController.WaterValue < 0 && barController.HappinessValue >= -30 &&
-                  barController.HappinessValue < 0))
+                 ((barController.FoodValue >= -30 && barController.FoodValue < 0) || (barController.WaterValue >= -30 &&
+                  barController.WaterValue < 0) || (barController.HappinessValue >= -30 &&
+                  barController.HappinessValue < 0)))
         {
             Debug.Log("Goblin");
+            finishSprite.sprite = goblin;
         }
         else if (barController.FoodValue < -30 || barController.WaterValue < -30 || barController.HappinessValue < -30)
         {
             Debug.Log("PieceDeath");
+            finishSprite.sprite = govnyashka;
         }
         rowsController.DisableRows();
         StartCoroutine(MoveBackground());
