@@ -27,9 +27,9 @@ public class Point : MonoBehaviour
     public bool isFinish;
 
     public event Action<int, ItemChoice.Item> ChosenItemAction;
-    public event Action<Vector3,int,int> ChosenStartPointAction; 
-    public event Action<Vector3,int,int,Point> ChosenEndPointAction;
-    public event Action<Vector3> FinishAction; 
+    public event Action<Transform,int,int> ChosenStartPointAction; 
+    public event Action<Transform,int,int,Point> ChosenEndPointAction;
+    public event Action<Transform> FinishAction; 
 
     private void Awake()
     {
@@ -81,17 +81,17 @@ public class Point : MonoBehaviour
     {
         if (isFinish)
         {
-            FinishAction?.Invoke(transform.position);
+            FinishAction?.Invoke(transform);
             Debug.Log("finish");
             return;
         }
         if (!isActive)
         {
-            ChosenStartPointAction?.Invoke(transform.position,positionOnRow,numberRow);
+            ChosenStartPointAction?.Invoke(transform,positionOnRow,numberRow);
             Debug.Log("StartPoint");
             return;
         }
-        ChosenEndPointAction?.Invoke(transform.position,positionOnRow,numberRow,this);
+        ChosenEndPointAction?.Invoke(transform,positionOnRow,numberRow,this);
         Debug.Log("EndPoint");
     }
 

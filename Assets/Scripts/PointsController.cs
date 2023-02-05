@@ -18,7 +18,7 @@ public class PointsController : MonoBehaviour
 
 
     public void RandomPoint(TypePoint type, Action<int, ItemChoice.Item> chosenItem,
-        Action<Vector3, int, int> chosenStartPoint, Action<Vector3, int, int,Point> chosenEndPoint, Action<Vector3> finish)
+        Action<Transform, int, int> chosenStartPoint, Action<Transform, int, int,Point> chosenEndPoint)
     {
         if (!tempList.IsNullOrEmpty())
         {
@@ -43,7 +43,6 @@ public class PointsController : MonoBehaviour
             tempList[0].ChosenItemAction += chosenItem;
             tempList[0].ChosenStartPointAction += chosenStartPoint;
             tempList[0].ChosenEndPointAction += chosenEndPoint;
-            // tempList[0].FinishAction += finish;
             tempList.RemoveAt(0);
         }
     }

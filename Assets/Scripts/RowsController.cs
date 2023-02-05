@@ -17,7 +17,7 @@ namespace DefaultNamespace
         
         private int _positivePoints = 9, _negativePoints = 9, neutralPoints = 2;
 
-        private Vector3 _startPos, _endPos;
+        private Transform _startPos, _endPos;
         private int startPositionOnRow, startNumberRow;
 
         public event Action FinishAction; 
@@ -45,14 +45,14 @@ namespace DefaultNamespace
                 if (rnd > 0 && rnd <= 45 && _negativePoints > 0)
                 {
                     pointsController.RandomPoint(PointsController.TypePoint.Negative, updateStatusBar, ChosenStartPoint,
-                        ChosenEndPoint,Finish);
+                        ChosenEndPoint);
                     _negativePoints--;
                     Debug.Log("Set Negative point");
                 }
                 else if (rnd > 45 && _positivePoints > 0)
                 {
                     pointsController.RandomPoint(PointsController.TypePoint.Positive, updateStatusBar, ChosenStartPoint,
-                        ChosenEndPoint,Finish);
+                        ChosenEndPoint);
                     _positivePoints--;
                     Debug.Log("Set Positive point");
                 }
@@ -69,7 +69,7 @@ namespace DefaultNamespace
                 if (neutralPoints > 0)
                 {
                     pointsController.RandomPoint(PointsController.TypePoint.Neutral, updateStatusBar, ChosenStartPoint,
-                        ChosenEndPoint,Finish);
+                        ChosenEndPoint);
                     neutralPoints--;
                 }
 
@@ -77,13 +77,13 @@ namespace DefaultNamespace
                 if (rnd > 0 && rnd <= 45 && _negativePoints > 0)
                 {
                     pointsController.RandomPoint(PointsController.TypePoint.Negative, updateStatusBar, ChosenStartPoint,
-                        ChosenEndPoint,Finish);
+                        ChosenEndPoint);
                     _negativePoints--;
                 }
                 else if (rnd > 45 && _positivePoints > 0)
                 {
                     pointsController.RandomPoint(PointsController.TypePoint.Positive, updateStatusBar, ChosenStartPoint,
-                        ChosenEndPoint,Finish);
+                        ChosenEndPoint);
                     _positivePoints--;
                 }
             }
@@ -91,14 +91,14 @@ namespace DefaultNamespace
             return null;
         }
 
-        private void ChosenStartPoint(Vector3 startPos, int positionOnRow, int numberRow)
+        private void ChosenStartPoint(Transform startPos, int positionOnRow, int numberRow)
         {
             _startPos = startPos;
             startPositionOnRow = positionOnRow;
             startNumberRow = numberRow;
         }
 
-        private void ChosenEndPoint(Vector3 endPos, int positionOnRow, int numberRow, Point point)
+        private void ChosenEndPoint(Transform endPos, int positionOnRow, int numberRow, Point point)
         {
             if (numberRow != startNumberRow)
             {
@@ -118,7 +118,7 @@ namespace DefaultNamespace
             }
         }
 
-        private void Finish(Vector3 position)
+        private void Finish(Transform position)
         {
          FinishAction?.Invoke();   
         }
