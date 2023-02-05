@@ -6,6 +6,7 @@ public class Point : MonoBehaviour
     [SerializeField] private int weight;
     [SerializeField] private ItemChoice foodButton, waterButton, happinessButton;
     [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private TrailManager trailManager;
 
     public int positionOnRow;
     public int numberRow;

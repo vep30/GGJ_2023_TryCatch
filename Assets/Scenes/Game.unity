@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: isFinish
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1367787949236067498, guid: 6996ae44a13ded74f91a02c147b12827, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 1520972495674971314, guid: 6996ae44a13ded74f91a02c147b12827, type: 3}
       propertyPath: m_Name
       value: Finish
@@ -211,6 +215,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1919612285718615070, guid: 092f07694c508214da5f7ec8d0e28224, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 1919612285718615070, guid: 092f07694c508214da5f7ec8d0e28224, type: 3}
       propertyPath: positionOnRow
       value: 2
@@ -264,6 +272,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5287537095015838314, guid: 092f07694c508214da5f7ec8d0e28224, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 5287537095015838314, guid: 092f07694c508214da5f7ec8d0e28224, type: 3}
       propertyPath: positionOnRow
       value: 1
       objectReference: {fileID: 0}
@@ -276,6 +288,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8576634902276395933, guid: 092f07694c508214da5f7ec8d0e28224, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 8576634902276395933, guid: 092f07694c508214da5f7ec8d0e28224, type: 3}
       propertyPath: positionOnRow
       value: 4
       objectReference: {fileID: 0}
@@ -283,6 +299,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8959127616956794556, guid: 092f07694c508214da5f7ec8d0e28224, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 8959127616956794556, guid: 092f07694c508214da5f7ec8d0e28224, type: 3}
       propertyPath: positionOnRow
       value: 3
@@ -305,63 +325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be8d1eb36d113e45b7900aba24cd655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &376154524
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8628647726636822945, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_Name
-      value: TrailRoots
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628647726636822950, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
 --- !u!1001 &543404545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,6 +380,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1367787949236067498, guid: 6996ae44a13ded74f91a02c147b12827, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 1367787949236067498, guid: 6996ae44a13ded74f91a02c147b12827, type: 3}
       propertyPath: positionOnRow
       value: 5
@@ -502,7 +469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &640642850
 PrefabInstance:
@@ -564,6 +531,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2862584213310630230, guid: 17cb7b1f29d567444b07494774015dbc, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 2862584213310630230, guid: 17cb7b1f29d567444b07494774015dbc, type: 3}
       propertyPath: positionOnRow
       value: 2
       objectReference: {fileID: 0}
@@ -571,6 +542,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4706001031860108276, guid: 17cb7b1f29d567444b07494774015dbc, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 4706001031860108276, guid: 17cb7b1f29d567444b07494774015dbc, type: 3}
       propertyPath: positionOnRow
       value: 3
@@ -588,6 +563,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5340266507691126485, guid: 17cb7b1f29d567444b07494774015dbc, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 5340266507691126485, guid: 17cb7b1f29d567444b07494774015dbc, type: 3}
       propertyPath: positionOnRow
       value: 4
       objectReference: {fileID: 0}
@@ -599,6 +578,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8393371469972770594, guid: 17cb7b1f29d567444b07494774015dbc, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 8393371469972770594, guid: 17cb7b1f29d567444b07494774015dbc, type: 3}
       propertyPath: positionOnRow
       value: 1
@@ -792,6 +775,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673335140}
   m_CullTransparentMesh: 1
+--- !u!1 &720514402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 720514404}
+  - component: {fileID: 720514403}
+  m_Layer: 0
+  m_Name: TrailManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &720514403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720514402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58852496747a51a468e8a53557a1eb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trail: {fileID: 2710323495753812019, guid: 6de3050a836ab834882bc62df4f352d8, type: 3}
+--- !u!4 &720514404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720514402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &943995497
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,7 +855,7 @@ Transform:
   - {fileID: 1327938749}
   - {fileID: 1013093446}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &943995499
 MonoBehaviour:
@@ -963,6 +990,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1667077841062296833, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 1667077841062296833, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
       propertyPath: positionOnRow
       value: 1
       objectReference: {fileID: 0}
@@ -970,6 +1001,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2456304124454881751, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 2456304124454881751, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
       propertyPath: positionOnRow
       value: 3
@@ -978,6 +1013,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4963083045014084469, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 4963083045014084469, guid: dd9b1f5f8c6cc52499416eb11a2a3bdb, type: 3}
       propertyPath: positionOnRow
       value: 2
@@ -1100,6 +1139,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1367787949236067498, guid: 6996ae44a13ded74f91a02c147b12827, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 1367787949236067498, guid: 6996ae44a13ded74f91a02c147b12827, type: 3}
       propertyPath: positionOnRow
       value: 6
       objectReference: {fileID: 0}
@@ -1175,6 +1218,10 @@ PrefabInstance:
       propertyPath: isActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1367787949236067498, guid: 6996ae44a13ded74f91a02c147b12827, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 1520972495674971314, guid: 6996ae44a13ded74f91a02c147b12827, type: 3}
       propertyPath: m_Name
       value: Start
@@ -1262,6 +1309,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 923178895262996652, guid: 2839aabc32daeaf4db50775ccbf9a6d7, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 923178895262996652, guid: 2839aabc32daeaf4db50775ccbf9a6d7, type: 3}
       propertyPath: positionOnRow
       value: 2
       objectReference: {fileID: 0}
@@ -1318,6 +1369,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6849136781341540056, guid: 2839aabc32daeaf4db50775ccbf9a6d7, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 6849136781341540056, guid: 2839aabc32daeaf4db50775ccbf9a6d7, type: 3}
       propertyPath: positionOnRow
       value: 1
       objectReference: {fileID: 0}
@@ -1326,6 +1381,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7019505865410797359, guid: 2839aabc32daeaf4db50775ccbf9a6d7, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 7019505865410797359, guid: 2839aabc32daeaf4db50775ccbf9a6d7, type: 3}
       propertyPath: positionOnRow
       value: 4
       objectReference: {fileID: 0}
@@ -1333,6 +1392,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7654193562433096206, guid: 2839aabc32daeaf4db50775ccbf9a6d7, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 7654193562433096206, guid: 2839aabc32daeaf4db50775ccbf9a6d7, type: 3}
       propertyPath: positionOnRow
       value: 3
@@ -1531,7 +1594,7 @@ RectTransform:
   - {fileID: 654140534}
   - {fileID: 2061113083}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1743,6 +1806,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3927814596109223975, guid: 7d67393cb8616e043b02545857c75724, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
+    - target: {fileID: 3927814596109223975, guid: 7d67393cb8616e043b02545857c75724, type: 3}
       propertyPath: positionOnRow
       value: 2
       objectReference: {fileID: 0}
@@ -1750,6 +1817,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5797404568657500805, guid: 7d67393cb8616e043b02545857c75724, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 5797404568657500805, guid: 7d67393cb8616e043b02545857c75724, type: 3}
       propertyPath: positionOnRow
       value: 3
@@ -1758,6 +1829,10 @@ PrefabInstance:
       propertyPath: numberRow
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7296017616207490643, guid: 7d67393cb8616e043b02545857c75724, type: 3}
+      propertyPath: trailManager
+      value: 
+      objectReference: {fileID: 720514403}
     - target: {fileID: 7296017616207490643, guid: 7d67393cb8616e043b02545857c75724, type: 3}
       propertyPath: positionOnRow
       value: 1
