@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,7 +16,11 @@ namespace DefaultNamespace
             pointsController5;
 
         [SerializeField] private Point finishPoint;
-        
+        [SerializeField] private TrailManager trailManager;
+        [SerializeField] private Transform startPosition;
+
+        [SerializeField]private List<Trail> trails;
+
         private int _positivePoints = 9, _negativePoints = 9, neutralPoints = 2;
 
         private Transform _startPos, _endPos;
@@ -25,6 +31,9 @@ namespace DefaultNamespace
         {
             StartCoroutine(InitPointsCor(updateStatusBar));
             finishPoint.FinishAction += Finish;
+            _startPos = startPosition;
+            var trail = trailManager.InitTrail(startPosition);
+            trails.Add(trail);
         }
 
         private IEnumerator InitPointsCor(Action<int, ItemChoice.Item> updateStatusBar)
@@ -105,6 +114,7 @@ namespace DefaultNamespace
                 if (!(Mathf.Abs(startNumberRow - numberRow) > 1))
                 {
                     Debug.Log("canMove");
+                    MoveTrail(endPos);
                     point.ActivatePoint();
                 }
             }
@@ -113,6 +123,7 @@ namespace DefaultNamespace
                 if (!(Mathf.Abs(startPositionOnRow - positionOnRow) > 1))
                 {
                     Debug.Log("canMove");
+                    MoveTrail(endPos);
                     point.ActivatePoint();
                 }
             }
@@ -126,6 +137,34 @@ namespace DefaultNamespace
         public void DisableRows()
         {
             gameObject.SetActive(false);
+        }
+
+        public void MoveTrail(Transform target)
+        {
+            var needNewTrail = false;
+            foreach (var trail in trails.Where(trail => _startPos.position == trail.lasPosition))
+            {
+                trail.MoveTrail(target);
+                Debug.Log("Trail найден");
+                return;
+            }
+
+            var newTrail = trailManager.InitTrail(_startPos);
+            trails.Add(newTrail);
+            newTrail.MoveTrail(target);
+        }
+
+        public void DisableTrails()
+        {
+            foreach (var trail in trails)
+            {
+                trail.gameObject.SetActive(false);
+            }
+        }
+
+        private void LoseGame()
+        {
+            
         }
     }
 }

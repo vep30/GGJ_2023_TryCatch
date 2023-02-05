@@ -17,6 +17,11 @@ public class ManagerGame : MonoBehaviour
     private int numberMoves = 9;
     private float targetBackground = 242;
 
+    private void Start()
+    {
+        StartGame();
+    }
+
     public void StartGame()
     {
         rowsController.InitPoints(UpdateBar);
@@ -38,7 +43,8 @@ public class ManagerGame : MonoBehaviour
 
     private void EndGame()
     {
-        Debug.Log($"food = {barController.FoodValue} water = {barController.WaterValue} happiness = {barController.HappinessValue}");
+        Debug.Log(
+            $"food = {barController.FoodValue} water = {barController.WaterValue} happiness = {barController.HappinessValue}");
         Debug.Log("EndGame");
         if (
             (barController.FoodValue >= 0 && barController.FoodValue <= 30) &&
@@ -50,16 +56,6 @@ public class ManagerGame : MonoBehaviour
             finishSounds.Play();
             finishSprite.sprite = baby;
         }
-        else if (barController.FoodValue > 30 || barController.WaterValue > 30 || barController.HappinessValue > 30 ||
-                 ((barController.FoodValue >= -30 && barController.FoodValue < 0) || (barController.WaterValue >= -30 &&
-                  barController.WaterValue < 0) || (barController.HappinessValue >= -30 &&
-                  barController.HappinessValue < 0)))
-        {
-            Debug.Log("Goblin");
-            finishSounds.clip = badClip;
-            finishSounds.Play();
-            finishSprite.sprite = goblin;
-        }
         else if (barController.FoodValue < -30 || barController.WaterValue < -30 || barController.HappinessValue < -30)
         {
             Debug.Log("PieceDeath");
@@ -67,7 +63,19 @@ public class ManagerGame : MonoBehaviour
             finishSounds.Play();
             finishSprite.sprite = govnyashka;
         }
+        else if (barController.FoodValue > 30 || barController.WaterValue > 30 || barController.HappinessValue > 30 ||
+                 ((barController.FoodValue >= -30 && barController.FoodValue < 0) || (barController.WaterValue >= -30 &&
+                     barController.WaterValue < 0) || (barController.HappinessValue >= -30 &&
+                                                       barController.HappinessValue < 0)))
+        {
+            Debug.Log("Goblin");
+            finishSounds.clip = badClip;
+            finishSounds.Play();
+            finishSprite.sprite = goblin;
+        }
+        
         rowsController.DisableRows();
+        rowsController.DisableTrails();
         StartCoroutine(MoveBackground());
     }
 

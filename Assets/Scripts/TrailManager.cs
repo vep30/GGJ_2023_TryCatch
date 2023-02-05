@@ -6,9 +6,9 @@ public class TrailManager : MonoBehaviour
 {
     [SerializeField] private Trail trail;
 
-    public void InitTrail(Transform position)
+    public Trail InitTrail(Transform position)
     {
-        Instantiate(trail, position.position, Quaternion.identity);
+        return Instantiate(trail, position.position, Quaternion.identity);
     }
 
     public void MoveTrail(Transform target)
