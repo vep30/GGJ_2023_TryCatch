@@ -8,6 +8,8 @@ public class SceneChanger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "Menu")
             ChangeScene("Menu");
+        else if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "Menu")
+            Exit();
     }
 
     public void ChangeScene(string sceneName)
