@@ -24,10 +24,11 @@ public class ManagerGame : MonoBehaviour
 
     public void StartGame()
     {
+        barController.StartResetSlider();
         rowsController.InitPoints(UpdateBar);
         rowsController.FinishAction += EndGame;
         UpdateNumberMoves();
-        barController.StartResetSlider();
+        
     }
 
     private void RowsControllerOnUpdateNumberMove()

@@ -11,7 +11,7 @@ public class PointsController : MonoBehaviour
     public bool haveFreeItem => tempList.Count > 0;
     private List<Point> tempList;
 
-    private void Start()
+    private void Awake()
     {
         tempList = new List<Point>(row);
     }
