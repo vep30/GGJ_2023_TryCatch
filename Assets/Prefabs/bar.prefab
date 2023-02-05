@@ -657,12 +657,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 32
+    m_Left: -10
+    m_Right: 24
     m_Top: 110
     m_Bottom: 0
   m_ChildAlignment: 2
-  m_Spacing: -220
+  m_Spacing: -305.46
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
