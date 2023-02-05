@@ -10,6 +10,7 @@ public class Point : MonoBehaviour
     [SerializeField] private SpriteRenderer food, water, happiness;
     [SerializeField] private SpriteRenderer dotPoint;
     [SerializeField] private TrailManager trailManager;
+    [SerializeField] private AudioSource audio;
 
     [SerializeField]
     private List<Sprite> spiteMinus10, spiteMinus20, spiteMinus30, spitePlus10, spitePlus20, spitePlus30;
@@ -96,6 +97,7 @@ public class Point : MonoBehaviour
 
     public void ActivatePoint()
     {
+        audio.Play();
         foodButton.gameObject.SetActive(true);
         waterButton.gameObject.SetActive(true);
         happinessButton.gameObject.SetActive(true);
