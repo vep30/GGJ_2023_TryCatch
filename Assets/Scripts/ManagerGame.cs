@@ -12,6 +12,8 @@ public class ManagerGame : MonoBehaviour
     [SerializeField] private float timeDownHand;
     [SerializeField] private Image finishSprite;
     [SerializeField] private Sprite baby, goblin, govnyashka;
+    [SerializeField] private AudioSource finishSounds;
+    [SerializeField] private AudioClip goodClip, badClip;
     private int numberMoves = 9;
     private float targetBackground = 242;
 
@@ -44,6 +46,8 @@ public class ManagerGame : MonoBehaviour
             (barController.HappinessValue >= 0 && barController.HappinessValue <= 30))
         {
             Debug.Log("HappyEndGame");
+            finishSounds.clip = goodClip;
+            finishSounds.Play();
             finishSprite.sprite = baby;
         }
         else if (barController.FoodValue > 30 || barController.WaterValue > 30 || barController.HappinessValue > 30 ||
@@ -52,11 +56,15 @@ public class ManagerGame : MonoBehaviour
                   barController.HappinessValue < 0)))
         {
             Debug.Log("Goblin");
+            finishSounds.clip = badClip;
+            finishSounds.Play();
             finishSprite.sprite = goblin;
         }
         else if (barController.FoodValue < -30 || barController.WaterValue < -30 || barController.HappinessValue < -30)
         {
             Debug.Log("PieceDeath");
+            finishSounds.clip = badClip;
+            finishSounds.Play();
             finishSprite.sprite = govnyashka;
         }
         rowsController.DisableRows();

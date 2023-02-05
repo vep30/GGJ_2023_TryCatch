@@ -5,6 +5,7 @@ using UnityEngine;
 public class Trail : MonoBehaviour
 {
     [SerializeField] private float timeMove = 5f;
+    [SerializeField] private AudioSource moving;
     private Coroutine movingTrail;
 
     public void MoveTrail(Transform target)
@@ -24,6 +25,7 @@ public class Trail : MonoBehaviour
 
     private IEnumerator TrailMove(Transform target)
     {
+        moving.Play();
         float curTime = 0f;
         while (curTime < timeMove)
         {
@@ -34,6 +36,7 @@ public class Trail : MonoBehaviour
             yield return null;
         }
 
+        moving.Stop();
         StopTrail();
     }
 }
