@@ -271,7 +271,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: b6f0c443719daa646adcf621bf35462f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -304,6 +304,7 @@ MonoBehaviour:
   water: {fileID: 5656751511508838479}
   happiness: {fileID: 5261523704541087370}
   dotPoint: {fileID: 5871100131592058925}
+  trailManager: {fileID: 0}
   spiteMinus10:
   - {fileID: 21300000, guid: 3f77dab811d0e7f41a0a759a68f08ef1, type: 3}
   - {fileID: 21300000, guid: db889040054a9ec428671f453daed009, type: 3}
