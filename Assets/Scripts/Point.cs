@@ -9,6 +9,7 @@ public class Point : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private SpriteRenderer food, water, happiness;
     [SerializeField] private SpriteRenderer dotPoint;
+    [SerializeField] private TrailManager trailManager;
 
     [SerializeField]
     private List<Sprite> spiteMinus10, spiteMinus20, spiteMinus30, spitePlus10, spitePlus20, spitePlus30;
