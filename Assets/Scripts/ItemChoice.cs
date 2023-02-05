@@ -11,11 +11,13 @@ public class ItemChoice : MonoBehaviour
         Happiness = 3,
     }
 
+    [SerializeField] private AudioSource selectSound;
     public Item item;
     public event Action<Item> ChosenItem;
 
     private void OnMouseDown()
     {
+        selectSound.Play();
         ChosenItem?.Invoke(item);
     }
 }
