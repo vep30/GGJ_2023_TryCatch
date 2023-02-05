@@ -5,6 +5,7 @@ public class Point : MonoBehaviour
 {
     [SerializeField] private int weight;
     [SerializeField] private ItemChoice foodButton, waterButton, happinessButton;
+    [SerializeField] private SpriteRenderer sprite;
 
     public int positionOnRow;
     public int numberRow;
@@ -14,26 +15,26 @@ public class Point : MonoBehaviour
     public event Action<int, ItemChoice.Item> ChosenItemAction;
     public event Action<Vector3,int,int> ChosenStartPointAction; 
     public event Action<Vector3,int,int,Point> ChosenEndPointAction;
-    public event Action FinishAction; 
+    public event Action<Vector3> FinishAction; 
 
     private void Awake()
     {
         foodButton.ChosenItem += DisableItemsChoice;
         waterButton.ChosenItem += DisableItemsChoice;
         happinessButton.ChosenItem += DisableItemsChoice;
-        isActive = true;
     }
 
     public void SetWeight(int value)
     {
         weight = value;
+        isActive = true;
     }
 
     private void OnMouseDown()
     {
         if (isFinish)
         {
-            FinishAction?.Invoke();
+            FinishAction?.Invoke(transform.position);
             Debug.Log("finish");
             return;
         }
@@ -62,5 +63,12 @@ public class Point : MonoBehaviour
         happinessButton.gameObject.SetActive(false);
         ChosenItemAction?.Invoke(weight,item);
         isActive = false;
+    }
+
+    public void SetColor(Color color)
+    {
+        var spriteColor = sprite.color;
+        spriteColor = new Color(color.r,color.g,color.b);
+        sprite.color = spriteColor;
     }
 }

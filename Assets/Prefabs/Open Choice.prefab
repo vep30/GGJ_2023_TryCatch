@@ -216,7 +216,11 @@ MonoBehaviour:
   foodButton: {fileID: 741899742614164205}
   waterButton: {fileID: 1788644894701754117}
   happinessButton: {fileID: 2396664731257878608}
+  sprite: {fileID: 5871100131592058925}
   positionOnRow: 0
+  numberRow: 0
+  isActive: 0
+  isFinish: 0
 --- !u!58 &9040277293586178643
 CircleCollider2D:
   m_ObjectHideFlags: 0

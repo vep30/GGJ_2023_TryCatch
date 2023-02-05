@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,10 @@ public class BarController : MonoBehaviour
 {
     [SerializeField] private Slider food, water, happiness;
 
+    [SerializeField] private TMP_Text _text;
+    public int WaterValue => (int)water.value;
+    public int FoodValue => (int)food.value;
+    public int HappinessValue => (int)happiness.value;
 
     public void StartResetSlider()
     {
@@ -44,5 +49,10 @@ public class BarController : MonoBehaviour
     {
         happiness.value += value;
         Debug.Log($"Happiness = {happiness.value}");
+    }
+
+    public void SetNumberMoves(int value)
+    {
+        _text.text = $"Осталось ходов: {value} ";
     }
 }
