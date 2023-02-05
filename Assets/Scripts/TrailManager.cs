@@ -8,7 +8,7 @@ public class TrailManager : MonoBehaviour
 
     public void InitTrail(Transform position)
     {
-        Instantiate(trail, position.localPosition, Quaternion.identity);
+        Instantiate(trail, position.position, Quaternion.identity);
     }
 
     public void MoveTrail(Transform target)
